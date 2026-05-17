@@ -125,9 +125,15 @@ h3{font-size:var(--fs-h3);letter-spacing:-.01em}
 .nav__brand{display:flex;align-items:center;gap:.6rem;font-weight:600;font-size:1.05rem;letter-spacing:-.02em;color:var(--ink)}
 .nav__logo{width:34px;height:34px;border-radius:9px;box-shadow:0 2px 8px rgba(8,36,21,.18)}
 .nav__cta{font-size:.85rem;padding:.65rem 1.15rem;min-height:42px}
+.nav__links{display:none;list-style:none;align-items:center;gap:1.9rem;margin:0;padding:0}
+.nav__links a{position:relative;font-size:.9rem;font-weight:600;color:var(--ink);padding:.35rem 0}
+.nav__links a::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent);border-radius:2px;transform:scaleX(0);transform-origin:right;transition:transform var(--dur-fast) var(--ease-hover)}
+.nav__links a:hover{color:var(--accent-strong)}
+.nav__links a:hover::after{transform:scaleX(1);transform-origin:left}
+@media (min-width:760px){.nav__links{display:flex}}
 
 /* ---------- shared section ---------- */
-.section{padding-block:var(--sec);position:relative}
+.section{padding-block:var(--sec);position:relative;scroll-margin-top:88px}
 .section--tint{background:var(--surface-tint)}
 .section__head{max-width:42ch;margin-bottom:clamp(2.5rem,5vw,4rem)}
 .section__head--center{margin-inline:auto;text-align:center}
