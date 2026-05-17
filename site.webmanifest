@@ -1,0 +1,13 @@
+{
+  "name": "Instacalorie",
+  "short_name": "Instacalorie",
+  "description": "AI photo calorie and macro tracker for iPhone.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBFCFB",
+  "theme_color": "#29B468",
+  "icons": [
+    { "src": "/assets/img/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/assets/img/favicon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -8,7 +8,7 @@
 
 <title>Instacalorie. AI photo calorie & macro tracker for iPhone</title>
 <meta name="description" content="Snap a photo of your meal and instantly see calories, protein, fat, and carbs. Instacalorie is an AI food tracker coming soon to the App Store.">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <link rel="canonical" href="https://instacalorie.com/">
 
 <meta name="theme-color" content="#29B468">
@@ -30,6 +30,7 @@
 
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
+<link rel="manifest" href="/site.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,12 +41,41 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Instacalorie",
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "iOS",
-  "description": "AI photo-based calorie and macro tracker. Snap a photo of your meal and instantly see calories, protein, fat, and carbs. Coming soon to the App Store.",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://instacalorie.com/#org",
+      "name": "Instacalorie",
+      "url": "https://instacalorie.com/",
+      "logo": "https://instacalorie.com/assets/img/logo.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://instacalorie.com/#site",
+      "url": "https://instacalorie.com/",
+      "name": "Instacalorie",
+      "publisher": { "@id": "https://instacalorie.com/#org" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Instacalorie",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "iOS",
+      "description": "AI photo-based calorie and macro tracker. Snap a photo of your meal and instantly see calories, protein, fat, and carbs. Coming soon to the App Store.",
+      "publisher": { "@id": "https://instacalorie.com/#org" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How does Instacalorie work?", "acceptedAnswer": { "@type": "Answer", "text": "You take one photo of your meal. The app recognizes the food, estimates the portion, and returns calories plus protein, fat, and carbs. Adjust anything you want, then save." } },
+        { "@type": "Question", "name": "Do I have to weigh food or search a database?", "acceptedAnswer": { "@type": "Answer", "text": "No. There is no database to search and nothing to weigh. A single photo is the entire input." } },
+        { "@type": "Question", "name": "How accurate are the numbers?", "acceptedAnswer": { "@type": "Answer", "text": "Estimates are based on the photo and get closer to you the more you log and confirm. It is built for fast, consistent everyday tracking." } },
+        { "@type": "Question", "name": "Which devices will it support?", "acceptedAnswer": { "@type": "Answer", "text": "Instacalorie launches on iPhone. iOS is the focus at launch." } },
+        { "@type": "Question", "name": "When does it launch?", "acceptedAnswer": { "@type": "Answer", "text": "It is coming soon to the App Store. Join the early-access list and we will reach out by email before launch." } },
+        { "@type": "Question", "name": "How do I get early access?", "acceptedAnswer": { "@type": "Answer", "text": "Use the Get early access button to send us a quick email. No account and no credit card, just an email so we can notify you before launch." } }
+      ]
+    }
+  ]
 }
 </script>
 </head>
@@ -391,6 +421,42 @@
       <figure class="mosaic__item reveal" style="--i:5;--rot:5deg">
         <div class="device device--mini" style="--shot-ar: 430 / 932;"><div class="device__frame"><div class="device__screen"><img src="assets/img/onboarding.png" alt="Instacalorie onboarding screen" width="430" height="932" loading="lazy" decoding="async"></div><span class="device__island" aria-hidden="true"></span></div></div>
       </figure>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="section faq" aria-labelledby="faq-title">
+    <div class="container">
+      <header class="section__head section__head--center reveal">
+        <p class="kicker">Questions</p>
+        <h2 id="faq-title">Good to know.</h2>
+      </header>
+      <div class="faq__list" data-stagger>
+        <details class="faq__item reveal" style="--i:0">
+          <summary>How does Instacalorie work?<span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>You take one photo of your meal. The app recognizes the food, estimates the portion, and returns calories plus protein, fat, and carbs. Adjust anything you want, then save.</p></div>
+        </details>
+        <details class="faq__item reveal" style="--i:1">
+          <summary>Do I have to weigh food or search a database?<span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>No. There is no database to search and nothing to weigh. A single photo is the entire input.</p></div>
+        </details>
+        <details class="faq__item reveal" style="--i:2">
+          <summary>How accurate are the numbers?<span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>Estimates are based on the photo and get closer to you the more you log and confirm. It is built for fast, consistent everyday tracking.</p></div>
+        </details>
+        <details class="faq__item reveal" style="--i:3">
+          <summary>Which devices will it support?<span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>Instacalorie launches on iPhone. iOS is the focus at launch.</p></div>
+        </details>
+        <details class="faq__item reveal" style="--i:4">
+          <summary>When does it launch?<span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>It is coming soon to the App Store. Join the early-access list and we will reach out by email before launch.</p></div>
+        </details>
+        <details class="faq__item reveal" style="--i:5">
+          <summary>How do I get early access?<span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>Use the Get early access button to send us a quick email. No account and no credit card, just an email so we can notify you before launch.</p></div>
+        </details>
+      </div>
     </div>
   </section>
 

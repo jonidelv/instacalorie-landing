@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found · Instacalorie</title>
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#29B468">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<style>
+  .nf{min-height:100svh;display:grid;place-items:center;text-align:center;
+      padding:2rem var(--pad);position:relative;overflow:hidden;isolation:isolate}
+  .nf__bg{position:absolute;inset:0;z-index:-1;
+      background:
+        radial-gradient(50% 45% at 25% 15%,rgba(112,205,154,.28),transparent 70%),
+        radial-gradient(45% 40% at 85% 20%,rgba(212,240,225,.6),transparent 70%),
+        var(--bg)}
+  .nf__logo{width:60px;height:60px;border-radius:16px;box-shadow:0 8px 24px rgba(8,36,21,.2);margin:0 auto 1.75rem}
+  .nf__code{font-size:clamp(3.5rem,3rem + 6vw,6rem);font-weight:700;letter-spacing:-.04em;line-height:1;color:var(--ink)}
+  .nf h1{font-size:clamp(1.5rem,1.2rem + 2vw,2.25rem);margin-top:.75rem}
+  .nf p{color:var(--text-soft);font-size:var(--fs-lead);max-width:38ch;margin:1rem auto 2rem}
+  .nf__note{font-size:var(--fs-small);color:var(--text-mute);margin-top:1.4rem}
+</style>
+</head>
+<body>
+<main class="nf">
+  <span class="nf__bg" aria-hidden="true"></span>
+  <div>
+    <img class="nf__logo" src="/assets/img/logo.png" alt="Instacalorie" width="60" height="60">
+    <div class="nf__code">404</div>
+    <h1>This page got away.</h1>
+    <p>The link is broken or the page never existed. Let's get you back.</p>
+    <a class="btn btn--dark btn--lg" href="/">Back to home</a>
+    <p class="nf__note">Instacalorie is coming soon to the App Store.</p>
+  </div>
+</main>
+</body>
+</html>
