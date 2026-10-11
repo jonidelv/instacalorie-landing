@@ -13,3 +13,9 @@ if('IntersectionObserver' in window){
   }),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
   reveals.forEach(el=>io.observe(el))
 }else{reveals.forEach(el=>el.classList.add('in'))}
+// Image placeholders: the shimmer under a picture stops once that picture has decoded.
+// Already-complete images (cache, fast connection) are marked at once, so nothing flickers.
+document.querySelectorAll('img.ph').forEach(img=>{
+  const done=()=>img.classList.add('ok');
+  if(img.complete&&img.naturalWidth>0)done();else{img.addEventListener('load',done,{once:true});img.addEventListener('error',done,{once:true})}
+});

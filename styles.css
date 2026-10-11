@@ -41,3 +41,13 @@
   .float{animation:none}
   .pill{transition:none}
 }
+
+/* Image placeholders. A picture's box is sized by its width and height attributes, so
+   while the file is on its way the box is a soft grey block that breathes (opacity only,
+   so it costs nothing) and the picture takes its place once decoded (`.ok`, set by
+   script.js). Only with JS, like the reveals. */
+.js img.ph:not(.ok){background:#eceff3;border-radius:28px;color:transparent;animation:breathe 1.3s ease-in-out infinite}
+.js .hero-img.ph:not(.ok){filter:none}
+.js .phones img.ph:not(.ok){border-radius:36px}
+@keyframes breathe{0%,100%{opacity:1}50%{opacity:.55}}
+@media(prefers-reduced-motion:reduce){.js img.ph:not(.ok){animation:none}}
