@@ -18,8 +18,8 @@ script.js           smooth anchor scrolling and the reveal-on-scroll class, enha
 privacy/index.html  Privacy Policy, the page App Store Connect and the app link to
 terms/index.html    Terms and Conditions, same
 404.html            not-found page
-assets/             the page's images (app screens, photos, logo)
-assets/img/         favicons and the share image
+assets/             the page's images, WebP for the screens and the hero (converted from the owner's PNGs, which stay on their Mac), the logo and the share image
+assets/img/         favicons
 assets/img/store/   the App Store screenshots the owner uploads to App Store Connect, not used by the site
 CNAME, robots.txt, sitemap.xml, site.webmanifest
 ```
@@ -30,7 +30,7 @@ CNAME, robots.txt, sitemap.xml, site.webmanifest
 |---|---|---|
 | App Store link | every " Download" pill (the Apple glyph and one word, owner, Oct 2026), in `index.html` and the legal pages' header | inert for now (`href="#"` with `data-soon`, the click is swallowed in `script.js`). When the app is live, set every pill to `https://apps.apple.com/app/id6816730159` with `target="_blank" rel="noopener"` and drop `data-soon` |
 | Canonical and share URLs | `<head>` of each page | `https://instacalorie.com/` |
-| Share image | `assets/img/og-image.png` | 1200 by 630 |
+| Share image | `assets/og.jpg` | 1200 by 627, the share card with the scan phone and the macros |
 | Support email | the Contact section of the legal pages | `instacalorieapp@gmail.com` |
 
 ## Legal pages
