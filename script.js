@@ -1,5 +1,3 @@
-// The App Store pills do nothing until the app is live (owner, Oct 2026): the real link goes in README.md.
-document.querySelectorAll('a[data-soon]').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1){e.preventDefault();document.querySelector(id)?.scrollIntoView({behavior:'smooth'})}}));
 // Reveal on scroll: one observer, each element once, siblings inside a data-stagger group
 // follow one another 80 ms apart. No scroll listeners, no layout reads during the motion.

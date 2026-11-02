@@ -6,12 +6,12 @@ Static marketing site. Plain HTML and CSS, no framework, no build step. Deployed
 
 - `index.html` - the page: markup, copy, SEO and share meta. New design since Oct 2026 (the owner's "instacalorie-website 2" folder), the previous dark site is gone
 - `styles.css` - all styles, the legal pages and the 404 included (`.legal`, `.nf`, `.foot-links` at the end)
-- `script.js` - smooth anchor scrolling, the inert Download pills, and the reveal-on-scroll observer. Enhancement only: the page is complete without it, because every reveal rule is scoped to `.js` on the root element, which the inline script in the head sets, so without JS nothing is ever hidden
+- `script.js` - smooth anchor scrolling and the reveal-on-scroll observer. Enhancement only: the page is complete without it, because every reveal rule is scoped to `.js` on the root element, which the inline script in the head sets, so without JS nothing is ever hidden
 - `privacy/index.html` - privacy policy page
 - `terms/index.html` - terms and conditions page. Both legal pages must stay true to what the app and backend really do (which provider gets what, what is stored, what is deleted). When a feature changes what leaves the phone, update them and the effective date, and the `lastmod` dates in `sitemap.xml`. They share the site's shell: the `.nav` header with the brand and the App Store pill, and the same footer with the Terms and Privacy links
 - `404.html`, `robots.txt`, `sitemap.xml`, `site.webmanifest` - hosting plumbing
 - `assets/` - the page's images. The app screens and the hero are WebP (converted from the owner's PNGs with Pillow at quality 85 to 88, a 6 MB page became under 1 MB), every `<img>` carries its width and height and everything below the hero loads lazily. The head has Open Graph and Twitter tags, the Smart App Banner meta (`apple-itunes-app`, the app's id) and a JSON-LD graph (Organization, WebSite, MobileApplication) with no made-up ratings. `assets/img/` keeps the favicons, `assets/img/store/` the App Store screenshots the owner uploads to App Store Connect, not used by the site
-- The " Download" pills (the Apple glyph and one word, owner, Oct 2026) are inert for now: `href="#"` with `data-soon`, swallowed in `script.js`. When the app is live, point every one at `https://apps.apple.com/app/id6816730159` with `target="_blank" rel="noopener"` and drop `data-soon`
+- The " Download" pills (the Apple glyph and one word, owner, Oct 2026) are live since Nov 2026 and all point at `https://apps.apple.com/us/app/instacalorie-ai-calorie-scan/id6816730159` with `target="_blank" rel="noopener"`, also used as `installUrl` and `sameAs` in the JSON-LD. No build step means no variable: change it with a repo-wide search and replace
 
 Run locally with `python3 -m http.server 8000` from this folder so absolute paths behave like production.
 
@@ -34,7 +34,7 @@ Why Instacalorie, "Built to make tracking effortless":
 ## Conventions
 
 - Semantic HTML, responsive without a framework, real image alt text.
-- The CTA pills are inert until the app is live, see Layout for how to wire the App Store link.
+- The App Store link lives in every Download pill, see Layout.
 - Nothing may depend on JS to be visible or usable: the reveal class only animates elements that are laid out anyway.
 - Motion (Oct 2026, from the web-animation-design and fixing-motion-performance skills): entrances only, `transform` and `opacity` only, one ease-out curve (`--ease-out`, quint). The hero rises on load in a top-to-bottom sequence (`.rise`, 50 to 420 ms delays). Everything below reveals once on scroll through one IntersectionObserver (`.reveal`, 700 ms), siblings inside a `data-stagger` group 80 ms apart (the ticker words, the three steps, the strip's phones, the closing block). Pills press to 97% and only change color on hover for real pointers. Every piece of motion is off under `prefers-reduced-motion`. The large pictures (`img.ph`, every WebP) show a grey breathing block in their own box until each one has decoded (`.ok` from `script.js`), so on a slow phone connection the layout is complete and each picture settles in as it arrives instead of blank gaps. No scroll listeners, no layout reads during motion, no blur beyond the static aurora.
 - Keep wording consistent with the app. If copy changes here, check the app's empty states and onboarding use the same language. The landing may say "AI", the app never does.

@@ -28,7 +28,7 @@ CNAME, robots.txt, sitemap.xml, site.webmanifest
 
 | What | Where | Current |
 |---|---|---|
-| App Store link | every " Download" pill (the Apple glyph and one word, owner, Oct 2026), in `index.html` and the legal pages' header | inert for now (`href="#"` with `data-soon`, the click is swallowed in `script.js`). When the app is live, set every pill to `https://apps.apple.com/app/id6816730159` with `target="_blank" rel="noopener"` and drop `data-soon` |
+| App Store link | every " Download" pill (the Apple glyph and one word, owner, Oct 2026), in `index.html` and the legal pages' header | `https://apps.apple.com/us/app/instacalorie-ai-calorie-scan/id6816730159`, opens in a new tab (`target="_blank" rel="noopener"`). Plain HTML has no variables, so to change it, search and replace this exact URL across the repo (the 7 pills plus `installUrl` and `sameAs` in the JSON-LD) |
 | Canonical and share URLs | `<head>` of each page | `https://instacalorie.com/` |
 | Share image | `assets/og.jpg` | 1200 by 627, the share card with the scan phone and the macros |
 | Support email | the Contact section of the legal pages | `instacalorieapp@gmail.com` |
